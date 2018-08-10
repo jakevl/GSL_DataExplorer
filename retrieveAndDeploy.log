@@ -1,47 +1,14 @@
-Loading required package: methods
+^C^C^C^C
+Attaching package: 'reshape2'
 
-Attaching package: 'shiny'
+The following objects are masked from 'package:reshape':
 
-The following object is masked from 'package:rsconnect':
+    colsplit, melt, recast
 
-    serverInfo
-
-Preparing to deploy application...DONE
-Uploading bundle for application: 270580...DONE
-Deploying bundle: 1295316 for application: 270580 ...
-Waiting for task: 517281957
-  building: Parsing manifest
-  building: Building image: 1305080
-  building: Fetching packages
-  building: Installing packages
-  building: Installing files
-  building: Pushing image: 1305080
-  deploying: Starting instances
-  rollforward: Activating new instances
-  terminating: Stopping old instances
-Application successfully deployed to https://udwq-jakevl.shinyapps.io/GSL_data_explorer/
-Loading required package: methods
-
-Attaching package: 'shiny'
-
-The following object is masked from 'package:rsconnect':
-
-    serverInfo
-
-Preparing to deploy application...DONE
-Uploading bundle for application: 270580...DONE
-Deploying bundle: 1296748 for application: 270580 ...
-Waiting for task: 517513347
-  building: Parsing manifest
-  building: Building image: 1306660
-  building: Fetching packages
-  building: Installing packages
-  building: Installing files
-  building: Pushing image: 1306660
-  deploying: Starting instances
-  rollforward: Activating new instances
-  success: Stopping old instances
-Application successfully deployed to https://udwq-jakevl.shinyapps.io/GSL_data_explorer/
+Preparing to deploy application...Error: HTTP 403
+GET https://api.shinyapps.io/v1/applications/270580
+Forbidden
+Execution halted
 
 Attaching package: 'reshape2'
 
@@ -50,10 +17,107 @@ The following objects are masked from 'package:reshape':
     colsplit, melt, recast
 
 Preparing to deploy application...DONE
-Uploading bundle for application: 270580...DONE
-Deploying bundle: 1349372 for application: 270580 ...
-Waiting for task: 523314336
+Uploading bundle for application: 359198...DONE
+Deploying bundle: 1430329 for application: 359198 ...
+Waiting for task: 531765399
   building: Parsing manifest
-  building: Building image: 1361928
+  building: Building image: 1443791
   building: Installing system dependencies
-^C
+  building: Fetching packages
+  building: Installing packages
+  building: Installing files
+  building: Pushing image: 1443791
+  deploying: Starting instances
+  rollforward: Activating new instances
+  unstaging: Stopping old instances
+Application successfully deployed to https://udwq.shinyapps.io/GSL_data_explorer/
+Error: Unknown account name 'jakevl' (you can use the setAccountInfo function to add a new account)
+Execution halted
+
+Attaching package: 'reshape2'
+
+The following objects are masked from 'package:reshape':
+
+    colsplit, melt, recast
+
+Preparing to deploy application...DONE
+Uploading bundle for application: 359198...DONE
+Deploying bundle: 1430343 for application: 359198 ...
+Waiting for task: 531766291
+  building: Parsing manifest
+  building: Building image: 1443805
+  building: Installing system dependencies
+  building: Fetching packages
+  building: Installing packages
+  building: Installing files
+  building: Pushing image: 1443805
+  deploying: Starting instances
+  terminating: Stopping old instances
+Application successfully deployed to https://udwq.shinyapps.io/GSL_data_explorer/
+Loading required package: methods
+
+Attaching package: 'shiny'
+
+The following object is masked from 'package:rsconnect':
+
+    serverInfo
+
+
+Attaching package: 'reshape2'
+
+The following objects are masked from 'package:reshape':
+
+    colsplit, melt, recast
+
+Preparing to deploy application...DONE
+Uploading bundle for application: 359198...DONE
+Deploying bundle: 1459358 for application: 359198 ...
+Waiting for task: 534823107
+  building: Parsing manifest
+  building: Building image: 1472941
+  building: Installing system dependencies
+  building: Fetching packages
+  building: Installing packages
+  building: Installing files
+  building: Pushing image: 1472941
+  deploying: Starting instances
+  rollforward: Activating new instances
+  success: Stopping old instances
+Application successfully deployed to https://udwq.shinyapps.io/GSL_data_explorer/
+Loading required package: methods
+
+Attaching package: 'shiny'
+
+The following object is masked from 'package:rsconnect':
+
+    serverInfo
+
+
+Attaching package: 'reshape2'
+
+The following objects are masked from 'package:reshape':
+
+    colsplit, melt, recast
+
+Preparing to deploy application...DONE
+Uploading bundle for application: 359198...DONE
+Deploying bundle: 1511638 for application: 359198 ...
+Waiting for task: 540637532
+  building: Parsing manifest
+  building: Building image: 1526999
+  building: Installing system dependencies
+  building: Fetching packages
+  building: Installing packages
+  building: Installing files
+  building: Pushing image: 1526999
+  deploying: Starting instances
+  unstaging: Stopping old instances
+Application successfully deployed to https://udwq.shinyapps.io/GSL_data_explorer/
+Loading required package: methods
+
+Attaching package: 'shiny'
+
+The following object is masked from 'package:rsconnect':
+
+    serverInfo
+

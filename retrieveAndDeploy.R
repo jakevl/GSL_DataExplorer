@@ -113,8 +113,8 @@ source("functions/retrieveLakeElev_calcVol.R")
 
 
 library(rsconnect)
-deployApp("F:\\Shiny\\GSL_data_explorer",appName="GSL_data_explorer",account="udwq")
-deployApp("F:\\Shiny\\GSL_data_explorer",appName="GSL_data_explorer",account="jakevl2")
+deployApp("F:\\Shiny\\GSL_data_explorer",account="udwq")
+#deployApp("F:\\Shiny\\GSL_data_explorer",account="jakevl")
 
 library(shiny)
 #runApp("F:\\Shiny\\GSL_data_explorer")
