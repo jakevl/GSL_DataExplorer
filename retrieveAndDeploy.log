@@ -121,3 +121,936 @@ The following object is masked from 'package:rsconnect':
 
     serverInfo
 
+
+Execution halted
+^C^C
+Attaching package: 'reshape2'
+
+The following objects are masked from 'package:reshape':
+
+    colsplit, melt, recast
+
+Preparing to deploy application...DONE
+Uploading bundle for application: 359198...DONE
+Deploying bundle: 1675033 for application: 359198 ...
+Waiting for task: 561665826
+  building: Parsing manifest
+  building: Building image: 1721849
+  building: Installing system dependencies
+  building: Fetching packages
+  building: Building package: raster
+  building: Building package: satellite
+  building: Building package: sf
+################################ Begin Task Log ################################ 
+[2018-10-31T19:08:23.145698787+0000] Execute script: packages/build/units.sh
++ set -e
++ apt-get update -qq
++ apt-get install -y libudunits2-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libudunits2-0
+The following NEW packages will be installed:
+  libudunits2-0 libudunits2-dev
+0 upgraded, 2 newly installed, 0 to remove and 51 not upgraded.
+Need to get 430 kB of archives.
+After this operation, 992 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libudunits2-0 amd64 2.2.20-1 [69.5 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libudunits2-dev amd64 2.2.20-1 [360 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 430 kB in 0s (25.9 MB/s)
+Selecting previously unselected package libudunits2-0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 119114 files and directories currently installed.)
+Preparing to unpack .../libudunits2-0_2.2.20-1_amd64.deb ...
+Unpacking libudunits2-0:amd64 (2.2.20-1) ...
+Selecting previously unselected package libudunits2-dev.
+Preparing to unpack .../libudunits2-dev_2.2.20-1_amd64.deb ...
+Unpacking libudunits2-dev (2.2.20-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libudunits2-0:amd64 (2.2.20-1) ...
+Setting up libudunits2-dev (2.2.20-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+[2018-10-31T19:08:27.288823625+0000] Execute script: packages/build/rgdal.sh
++ set -e
++ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 314DF160
+Executing: /tmp/tmp.GqWXorx7nY/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv-keys
+314DF160
+gpg: requesting key 314DF160 from hkp server keyserver.ubuntu.com
+gpg: key 314DF160: public key "Launchpad ubuntugis-stable" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+++ lsb_release -cs
++ echo 'deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial main'
++ apt-get update -qq
++ apt-get install -y libgdal-dev libproj-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libproj-dev is already the newest version (4.9.2-2).
+The following packages were automatically installed and are no longer required:
+  libgdal1i libjasper-dev libjasper1
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  libarmadillo-dev libarpack2-dev libepsilon-dev libfreexl-dev libfreexl1
+  libgdal20 libgeotiff-dev libgeotiff2 libjbig-dev libjson-c-dev libkml-dev
+  libkmlconvenience1 libkmlregionator1 libkmlxsd1 libminizip-dev
+  libogdi3.2-dev libopenjp2-7 libopenjp2-7-dev libpoppler-dev
+  libpoppler-private-dev libqhull-dev libqhull7 libsuperlu-dev libtiff5-dev
+  libtiffxx5 liburiparser-dev
+Suggested packages:
+  libitpp-dev libgdal-doc libgeotiff-epsg geotiff-bin gdal-bin libsuperlu-doc
+The following NEW packages will be installed:
+  libarmadillo-dev libarpack2-dev libepsilon-dev libfreexl-dev libgdal20
+  libgeotiff-dev libgeotiff2 libjbig-dev libjson-c-dev libkml-dev
+  libkmlconvenience1 libkmlregionator1 libkmlxsd1 libminizip-dev
+  libogdi3.2-dev libopenjp2-7-dev libpoppler-dev libpoppler-private-dev
+  libqhull-dev libqhull7 libsuperlu-dev libtiff5-dev libtiffxx5
+  liburiparser-dev
+The following packages will be upgraded:
+  libfreexl1 libgdal-dev libopenjp2-7
+3 upgraded, 24 newly installed, 0 to remove and 51 not upgraded.
+Need to get 14.6 MB of archives.
+After this operation, 42.5 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libarpack2-dev amd64 3.3.0-1build2 [94.7 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libsuperlu-dev amd64 4.3+dfsg-3 [174 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libarmadillo-dev amd64 1:6.500.5+dfsg-1 [297 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libfreexl1 amd64 1.0.2-1ubuntu0.1 [33.9 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libgeotiff2 amd64 1.4.1-2 [55.9 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libopenjp2-7 amd64 2.1.2-1.1+deb9u2build0.1 [112 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libqhull7 amd64 2015.2-1 [152 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libepsilon-dev amd64 0.9.2-3ubuntu1 [48.9 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libfreexl-dev amd64 1.0.2-1ubuntu0.1 [30.5 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libjbig-dev amd64 2.1-3.1 [24.8 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtiffxx5 amd64 4.0.6-1ubuntu0.4 [5588 B]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtiff5-dev amd64 4.0.6-1ubuntu0.4 [268 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libgeotiff-dev amd64 1.4.1-2 [77.3 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libjson-c-dev amd64 0.11-4ubuntu2 [30.6 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libkmlconvenience1 amd64 1.3.0-1 [44.2 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libkmlregionator1 amd64 1.3.0-1 [19.8 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libkmlxsd1 amd64 1.3.0-1 [28.0 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libminizip-dev amd64 1.1-8 [26.7 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 liburiparser-dev amd64 0.8.4-1 [10.0 kB]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libkml-dev amd64 1.3.0-1 [936 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libogdi3.2-dev amd64 3.2.0~beta2-7.1build1 [23.0 kB]
+Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libopenjp2-7-dev amd64 2.1.2-1.1+deb9u2build0.1 [25.4 kB]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpoppler-dev amd64 0.41.0-0ubuntu1.8 [761 kB]
+Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpoppler-private-dev amd64 0.41.0-0ubuntu1.8 [165 kB]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libqhull-dev amd64 2015.2-1 [240 kB]
+Get:26 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial/main amd64 libgdal20 amd64 2.1.3+dfsg-1~xenial2 [5017 kB]
+Get:27 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial/main amd64 libgdal-dev amd64 2.1.3+dfsg-1~xenial2 [5864 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 14.6 MB in 38s (379 kB/s)
+Selecting previously unselected package libarpack2-dev.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 119141 files and directories currently installed.)
+Preparing to unpack .../libarpack2-dev_3.3.0-1build2_amd64.deb ...
+Unpacking libarpack2-dev (3.3.0-1build2) ...
+Selecting previously unselected package libsuperlu-dev:amd64.
+Preparing to unpack .../libsuperlu-dev_4.3+dfsg-3_amd64.deb ...
+Unpacking libsuperlu-dev:amd64 (4.3+dfsg-3) ...
+Selecting previously unselected package libarmadillo-dev.
+Preparing to unpack .../libarmadillo-dev_1%3a6.500.5+dfsg-1_amd64.deb ...
+Unpacking libarmadillo-dev (1:6.500.5+dfsg-1) ...
+Preparing to unpack .../libfreexl1_1.0.2-1ubuntu0.1_amd64.deb ...
+Unpacking libfreexl1:amd64 (1.0.2-1ubuntu0.1) over (1.0.2-1) ...
+Selecting previously unselected package libgeotiff2:amd64.
+Preparing to unpack .../libgeotiff2_1.4.1-2_amd64.deb ...
+Unpacking libgeotiff2:amd64 (1.4.1-2) ...
+Preparing to unpack .../libopenjp2-7_2.1.2-1.1+deb9u2build0.1_amd64.deb ...
+Unpacking libopenjp2-7:amd64 (2.1.2-1.1+deb9u2build0.1) over (2.1.0-2.1ubuntu0.1) ...
+Selecting previously unselected package libqhull7:amd64.
+Preparing to unpack .../libqhull7_2015.2-1_amd64.deb ...
+Unpacking libqhull7:amd64 (2015.2-1) ...
+Selecting previously unselected package libgdal20.
+Preparing to unpack .../libgdal20_2.1.3+dfsg-1~xenial2_amd64.deb ...
+Unpacking libgdal20 (2.1.3+dfsg-1~xenial2) ...
+Selecting previously unselected package libepsilon-dev:amd64.
+Preparing to unpack .../libepsilon-dev_0.9.2-3ubuntu1_amd64.deb ...
+Unpacking libepsilon-dev:amd64 (0.9.2-3ubuntu1) ...
+Selecting previously unselected package libfreexl-dev:amd64.
+Preparing to unpack .../libfreexl-dev_1.0.2-1ubuntu0.1_amd64.deb ...
+Unpacking libfreexl-dev:amd64 (1.0.2-1ubuntu0.1) ...
+Selecting previously unselected package libjbig-dev:amd64.
+Preparing to unpack .../libjbig-dev_2.1-3.1_amd64.deb ...
+Unpacking libjbig-dev:amd64 (2.1-3.1) ...
+Selecting previously unselected package libtiffxx5:amd64.
+Preparing to unpack .../libtiffxx5_4.0.6-1ubuntu0.4_amd64.deb ...
+Unpacking libtiffxx5:amd64 (4.0.6-1ubuntu0.4) ...
+Selecting previously unselected package libtiff5-dev:amd64.
+Preparing to unpack .../libtiff5-dev_4.0.6-1ubuntu0.4_amd64.deb ...
+Unpacking libtiff5-dev:amd64 (4.0.6-1ubuntu0.4) ...
+Selecting previously unselected package libgeotiff-dev:amd64.
+Preparing to unpack .../libgeotiff-dev_1.4.1-2_amd64.deb ...
+Unpacking libgeotiff-dev:amd64 (1.4.1-2) ...
+Selecting previously unselected package libjson-c-dev:amd64.
+Preparing to unpack .../libjson-c-dev_0.11-4ubuntu2_amd64.deb ...
+Unpacking libjson-c-dev:amd64 (0.11-4ubuntu2) ...
+Selecting previously unselected package libkmlconvenience1:amd64.
+Preparing to unpack .../libkmlconvenience1_1.3.0-1_amd64.deb ...
+Unpacking libkmlconvenience1:amd64 (1.3.0-1) ...
+Selecting previously unselected package libkmlregionator1:amd64.
+Preparing to unpack .../libkmlregionator1_1.3.0-1_amd64.deb ...
+Unpacking libkmlregionator1:amd64 (1.3.0-1) ...
+Selecting previously unselected package libkmlxsd1:amd64.
+Preparing to unpack .../libkmlxsd1_1.3.0-1_amd64.deb ...
+Unpacking libkmlxsd1:amd64 (1.3.0-1) ...
+Selecting previously unselected package libminizip-dev:amd64.
+Preparing to unpack .../libminizip-dev_1.1-8_amd64.deb ...
+Unpacking libminizip-dev:amd64 (1.1-8) ...
+Selecting previously unselected package liburiparser-dev.
+Preparing to unpack .../liburiparser-dev_0.8.4-1_amd64.deb ...
+Unpacking liburiparser-dev (0.8.4-1) ...
+Selecting previously unselected package libkml-dev:amd64.
+Preparing to unpack .../libkml-dev_1.3.0-1_amd64.deb ...
+Unpacking libkml-dev:amd64 (1.3.0-1) ...
+Selecting previously unselected package libogdi3.2-dev.
+Preparing to unpack .../libogdi3.2-dev_3.2.0~beta2-7.1build1_amd64.deb ...
+Unpacking libogdi3.2-dev (3.2.0~beta2-7.1build1) ...
+Selecting previously unselected package libopenjp2-7-dev.
+Preparing to unpack .../libopenjp2-7-dev_2.1.2-1.1+deb9u2build0.1_amd64.deb ...
+Unpacking libopenjp2-7-dev (2.1.2-1.1+deb9u2build0.1) ...
+Selecting previously unselected package libpoppler-dev:amd64.
+Preparing to unpack .../libpoppler-dev_0.41.0-0ubuntu1.8_amd64.deb ...
+Unpacking libpoppler-dev:amd64 (0.41.0-0ubuntu1.8) ...
+Selecting previously unselected package libpoppler-private-dev:amd64.
+Preparing to unpack .../libpoppler-private-dev_0.41.0-0ubuntu1.8_amd64.deb ...
+Unpacking libpoppler-private-dev:amd64 (0.41.0-0ubuntu1.8) ...
+Selecting previously unselected package libqhull-dev:amd64.
+Preparing to unpack .../libqhull-dev_2015.2-1_amd64.deb ...
+Unpacking libqhull-dev:amd64 (2015.2-1) ...
+Preparing to unpack .../libgdal-dev_2.1.3+dfsg-1~xenial2_amd64.deb ...
+Unpacking libgdal-dev (2.1.3+dfsg-1~xenial2) over (1.11.3+dfsg-3build2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libarpack2-dev (3.3.0-1build2) ...
+Setting up libsuperlu-dev:amd64 (4.3+dfsg-3) ...
+Setting up libarmadillo-dev (1:6.500.5+dfsg-1) ...
+Setting up libfreexl1:amd64 (1.0.2-1ubuntu0.1) ...
+Setting up libgeotiff2:amd64 (1.4.1-2) ...
+Setting up libopenjp2-7:amd64 (2.1.2-1.1+deb9u2build0.1) ...
+Setting up libqhull7:amd64 (2015.2-1) ...
+Setting up libgdal20 (2.1.3+dfsg-1~xenial2) ...
+Setting up libepsilon-dev:amd64 (0.9.2-3ubuntu1) ...
+Setting up libfreexl-dev:amd64 (1.0.2-1ubuntu0.1) ...
+Setting up libjbig-dev:amd64 (2.1-3.1) ...
+Setting up libtiffxx5:amd64 (4.0.6-1ubuntu0.4) ...
+Setting up libtiff5-dev:amd64 (4.0.6-1ubuntu0.4) ...
+Setting up libgeotiff-dev:amd64 (1.4.1-2) ...
+Setting up libjson-c-dev:amd64 (0.11-4ubuntu2) ...
+Setting up libkmlconvenience1:amd64 (1.3.0-1) ...
+Setting up libkmlregionator1:amd64 (1.3.0-1) ...
+Setting up libkmlxsd1:amd64 (1.3.0-1) ...
+Setting up libminizip-dev:amd64 (1.1-8) ...
+Setting up liburiparser-dev (0.8.4-1) ...
+Setting up libkml-dev:amd64 (1.3.0-1) ...
+Setting up libogdi3.2-dev (3.2.0~beta2-7.1build1) ...
+Setting up libopenjp2-7-dev (2.1.2-1.1+deb9u2build0.1) ...
+Setting up libpoppler-dev:amd64 (0.41.0-0ubuntu1.8) ...
+Setting up libpoppler-private-dev:amd64 (0.41.0-0ubuntu1.8) ...
+Setting up libqhull-dev:amd64 (2015.2-1) ...
+Setting up libgdal-dev (2.1.3+dfsg-1~xenial2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+[2018-10-31T19:09:14.409761856+0000] Execute script: packages/build/gdalUtils.sh
++ set -e
++ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 314DF160
+Executing: /tmp/tmp.1EARYaZODg/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv-keys
+314DF160
+gpg: requesting key 314DF160 from hkp server keyserver.ubuntu.com
+gpg: key 314DF160: "Launchpad ubuntugis-stable" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+++ lsb_release -cs
++ echo 'deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial main'
++ apt-get update -qq
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
++ apt-get install -y libgdal-dev libproj-dev gdal-bin
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libproj-dev is already the newest version (4.9.2-2).
+libgdal-dev is already the newest version (2.1.3+dfsg-1~xenial2).
+The following packages were automatically installed and are no longer required:
+  libgdal1i libjasper-dev libjasper1
+Use 'apt autoremove' to remove them.
+Suggested packages:
+  libgdal-grass python-gdal
+The following NEW packages will be installed:
+  gdal-bin
+0 upgraded, 1 newly installed, 0 to remove and 51 not upgraded.
+Need to get 335 kB of archives.
+After this operation, 694 kB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial/main amd64 gdal-bin amd64 2.1.3+dfsg-1~xenial2 [335 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 335 kB in 1s (194 kB/s)
+Selecting previously unselected package gdal-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 120513 files and directories currently installed.)
+Preparing to unpack .../gdal-bin_2.1.3+dfsg-1~xenial2_amd64.deb ...
+Unpacking gdal-bin (2.1.3+dfsg-1~xenial2) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up gdal-bin (2.1.3+dfsg-1~xenial2) ...
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+[2018-10-31T19:09:23.719385043+0000] Execute script: packages/build/igraph.sh
++ set -e
++ apt-get update -qq
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
++ apt-get install -y libglpk-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libgdal1i libjasper-dev libjasper1
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  libamd2.4.1 libbtf1.2.1 libcamd2.4.1 libccolamd2.9.1 libcholmod3.0.6
+  libcolamd2.9.1 libcsparse3.1.4 libcxsparse3.1.4 libglpk36 libgmp-dev
+  libgmpxx4ldbl libklu1.3.3 libldl2.2.1 libspqr2.0.2 libsuitesparse-dev
+  libsuitesparseconfig4.4.6 libumfpack5.7.1
+Suggested packages:
+  libiodbc2-dev gmp-doc libgmp10-doc libmpfr-dev
+The following NEW packages will be installed:
+  libamd2.4.1 libbtf1.2.1 libcamd2.4.1 libccolamd2.9.1 libcholmod3.0.6
+  libcolamd2.9.1 libcsparse3.1.4 libcxsparse3.1.4 libglpk-dev libglpk36
+  libgmp-dev libgmpxx4ldbl libklu1.3.3 libldl2.2.1 libspqr2.0.2
+  libsuitesparse-dev libsuitesparseconfig4.4.6 libumfpack5.7.1
+0 upgraded, 18 newly installed, 0 to remove and 51 not upgraded.
+Need to get 2864 kB of archives.
+After this operation, 12.2 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libsuitesparseconfig4.4.6 amd64 1:4.4.6-1 [9322 B]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libamd2.4.1 amd64 1:4.4.6-1 [21.3 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libbtf1.2.1 amd64 1:4.4.6-1 [10.8 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcamd2.4.1 amd64 1:4.4.6-1 [20.0 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libccolamd2.9.1 amd64 1:4.4.6-1 [21.5 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcolamd2.9.1 amd64 1:4.4.6-1 [15.7 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcholmod3.0.6 amd64 1:4.4.6-1 [293 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcsparse3.1.4 amd64 1:4.4.6-1 [26.3 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcxsparse3.1.4 amd64 1:4.4.6-1 [62.8 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libglpk36 amd64 4.57-1build3 [386 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgmpxx4ldbl amd64 2:6.1.0+dfsg-2 [8948 B]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgmp-dev amd64 2:6.1.0+dfsg-2 [314 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libklu1.3.3 amd64 1:4.4.6-1 [71.5 kB]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libldl2.2.1 amd64 1:4.4.6-1 [10.6 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libumfpack5.7.1 amd64 1:4.4.6-1 [223 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libspqr2.0.2 amd64 1:4.4.6-1 [63.6 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libsuitesparse-dev amd64 1:4.4.6-1 [899 kB]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 libglpk-dev amd64 4.57-1build3 [408 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2864 kB in 0s (44.5 MB/s)
+Selecting previously unselected package libsuitesparseconfig4.4.6:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 120565 files and directories currently installed.)
+Preparing to unpack .../libsuitesparseconfig4.4.6_1%3a4.4.6-1_amd64.deb ...
+Unpacking libsuitesparseconfig4.4.6:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libamd2.4.1:amd64.
+Preparing to unpack .../libamd2.4.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libamd2.4.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libbtf1.2.1:amd64.
+Preparing to unpack .../libbtf1.2.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libbtf1.2.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libcamd2.4.1:amd64.
+Preparing to unpack .../libcamd2.4.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libcamd2.4.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libccolamd2.9.1:amd64.
+Preparing to unpack .../libccolamd2.9.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libccolamd2.9.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libcolamd2.9.1:amd64.
+Preparing to unpack .../libcolamd2.9.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libcolamd2.9.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libcholmod3.0.6:amd64.
+Preparing to unpack .../libcholmod3.0.6_1%3a4.4.6-1_amd64.deb ...
+Unpacking libcholmod3.0.6:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libcsparse3.1.4:amd64.
+Preparing to unpack .../libcsparse3.1.4_1%3a4.4.6-1_amd64.deb ...
+Unpacking libcsparse3.1.4:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libcxsparse3.1.4:amd64.
+Preparing to unpack .../libcxsparse3.1.4_1%3a4.4.6-1_amd64.deb ...
+Unpacking libcxsparse3.1.4:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libglpk36:amd64.
+Preparing to unpack .../libglpk36_4.57-1build3_amd64.deb ...
+Unpacking libglpk36:amd64 (4.57-1build3) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../libgmpxx4ldbl_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../libgmp-dev_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libklu1.3.3:amd64.
+Preparing to unpack .../libklu1.3.3_1%3a4.4.6-1_amd64.deb ...
+Unpacking libklu1.3.3:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libldl2.2.1:amd64.
+Preparing to unpack .../libldl2.2.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libldl2.2.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libumfpack5.7.1:amd64.
+Preparing to unpack .../libumfpack5.7.1_1%3a4.4.6-1_amd64.deb ...
+Unpacking libumfpack5.7.1:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libspqr2.0.2:amd64.
+Preparing to unpack .../libspqr2.0.2_1%3a4.4.6-1_amd64.deb ...
+Unpacking libspqr2.0.2:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libsuitesparse-dev:amd64.
+Preparing to unpack .../libsuitesparse-dev_1%3a4.4.6-1_amd64.deb ...
+Unpacking libsuitesparse-dev:amd64 (1:4.4.6-1) ...
+Selecting previously unselected package libglpk-dev.
+Preparing to unpack .../libglpk-dev_4.57-1build3_amd64.deb ...
+Unpacking libglpk-dev (4.57-1build3) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libsuitesparseconfig4.4.6:amd64 (1:4.4.6-1) ...
+Setting up libamd2.4.1:amd64 (1:4.4.6-1) ...
+Setting up libbtf1.2.1:amd64 (1:4.4.6-1) ...
+Setting up libcamd2.4.1:amd64 (1:4.4.6-1) ...
+Setting up libccolamd2.9.1:amd64 (1:4.4.6-1) ...
+Setting up libcolamd2.9.1:amd64 (1:4.4.6-1) ...
+Setting up libcholmod3.0.6:amd64 (1:4.4.6-1) ...
+Setting up libcsparse3.1.4:amd64 (1:4.4.6-1) ...
+Setting up libcxsparse3.1.4:amd64 (1:4.4.6-1) ...
+Setting up libglpk36:amd64 (4.57-1build3) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libgmp-dev:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libklu1.3.3:amd64 (1:4.4.6-1) ...
+Setting up libldl2.2.1:amd64 (1:4.4.6-1) ...
+Setting up libumfpack5.7.1:amd64 (1:4.4.6-1) ...
+Setting up libspqr2.0.2:amd64 (1:4.4.6-1) ...
+Setting up libsuitesparse-dev:amd64 (1:4.4.6-1) ...
+Setting up libglpk-dev (4.57-1build3) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+[2018-10-31T19:09:28.589505622+0000] Execute script: packages/build/sf.sh
++ set -e
++ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 314DF160
+Executing: /tmp/tmp.ZkIIUhqZys/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv-keys
+314DF160
+gpg: requesting key 314DF160 from hkp server keyserver.ubuntu.com
+gpg: key 314DF160: "Launchpad ubuntugis-stable" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+++ lsb_release -cs
++ echo 'deb http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial main'
++ apt-get update -qq
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:3
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:3
++ apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libproj-dev is already the newest version (4.9.2-2).
+libudunits2-dev is already the newest version (2.2.20-1).
+libgdal-dev is already the newest version (2.1.3+dfsg-1~xenial2).
+The following packages were automatically installed and are no longer required:
+  libgdal1i libgeos-3.5.0 libjasper-dev libjasper1
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  libgeos-3.5.1 libgeos-c1v5
+Suggested packages:
+  libgdal-doc
+The following NEW packages will be installed:
+  libgeos-3.5.1
+The following packages will be upgraded:
+  libgeos-c1v5 libgeos-dev
+2 upgraded, 1 newly installed, 0 to remove and 49 not upgraded.
+Need to get 612 kB of archives.
+After this operation, 2035 kB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial/main amd64 libgeos-3.5.1 amd64 3.5.1-3~xenial0 [481 kB]
+Get:2 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial/main amd64 libgeos-dev amd64 3.5.1-3~xenial0 [72.9 kB]
+Get:3 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu xenial/main amd64 libgeos-c1v5 amd64 3.5.1-3~xenial0 [58.0 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 612 kB in 2s (225 kB/s)
+Selecting previously unselected package libgeos-3.5.1.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 120788 files and directories currently installed.)
+Preparing to unpack .../libgeos-3.5.1_3.5.1-3~xenial0_amd64.deb ...
+Unpacking libgeos-3.5.1 (3.5.1-3~xenial0) ...
+Preparing to unpack .../libgeos-dev_3.5.1-3~xenial0_amd64.deb ...
+Unpacking libgeos-dev (3.5.1-3~xenial0) over (3.5.0-1ubuntu2) ...
+Preparing to unpack .../libgeos-c1v5_3.5.1-3~xenial0_amd64.deb ...
+Unpacking libgeos-c1v5 (3.5.1-3~xenial0) over (3.5.0-1ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libgeos-3.5.1 (3.5.1-3~xenial0) ...
+Setting up libgeos-c1v5 (3.5.1-3~xenial0) ...
+Setting up libgeos-dev (3.5.1-3~xenial0) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:2
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/ubuntugis-ppa.list:1 and /etc/apt/sources.list.d/ubuntugis-ppa.list:3
+[2018-10-31T19:10:04.002290776+0000] Installing R package: rlang (0.2.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘rlang’ ...
+* DONE (rlang)
+[2018-10-31T19:10:04.242994173+0000] Installing R package: viridisLite (0.3.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘viridisLite’ ...
+* DONE (viridisLite)
+[2018-10-31T19:10:04.469174254+0000] Installing R package: brew (1.0-6)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘brew’ ...
+* DONE (brew)
+[2018-10-31T19:10:04.760797916+0000] Installing R package: sourcetools (0.1.6)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘sourcetools’ ...
+* DONE (sourcetools)
+[2018-10-31T19:10:05.059640505+0000] Installing R package: stringi (1.1.7)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘stringi’ ...
+* DONE (stringi)
+[2018-10-31T19:10:05.503393301+0000] Installing R package: iterators (1.0.9)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘iterators’ ...
+* DONE (iterators)
+[2018-10-31T19:10:05.769991595+0000] Installing R package: utf8 (1.1.3)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘utf8’ ...
+* DONE (utf8)
+[2018-10-31T19:10:05.997262771+0000] Installing R package: assertthat (0.2.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘assertthat’ ...
+* DONE (assertthat)
+[2018-10-31T19:10:06.174786712+0000] Installing R package: curl (3.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘curl’ ...
+* DONE (curl)
+[2018-10-31T19:10:06.412368886+0000] Installing R package: spData (0.2.9.4)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘spData’ ...
+* DONE (spData)
+[2018-10-31T19:10:06.828249058+0000] Installing R package: praise (1.0.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘praise’ ...
+* DONE (praise)
+[2018-10-31T19:10:07.011630924+0000] Installing R package: base64enc (0.1-3)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘base64enc’ ...
+* DONE (base64enc)
+[2018-10-31T19:10:07.192955525+0000] Installing R package: magrittr (1.5)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘magrittr’ ...
+* DONE (magrittr)
+[2018-10-31T19:10:07.395187828+0000] Installing R package: colorspace (1.3-2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘colorspace’ ...
+* DONE (colorspace)
+[2018-10-31T19:10:07.667899393+0000] Installing R package: png (0.1-7)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘png’ ...
+* DONE (png)
+[2018-10-31T19:10:07.868236416+0000] Installing R package: plogr (0.1-1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘plogr’ ...
+* DONE (plogr)
+[2018-10-31T19:10:08.078684877+0000] Installing R package: munsell (0.5.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘munsell’ ...
+* DONE (munsell)
+[2018-10-31T19:10:08.290096635+0000] Installing R package: MASS (7.3-49)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘MASS’ ...
+* DONE (MASS)
+[2018-10-31T19:10:08.570899606+0000] Installing R package: class (7.3-14)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘class’ ...
+* DONE (class)
+[2018-10-31T19:10:08.805803481+0000] Installing R package: pkgconfig (2.0.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘pkgconfig’ ...
+* DONE (pkgconfig)
+[2018-10-31T19:10:09.035135697+0000] Installing R package: hms (0.4.2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘hms’ ...
+* DONE (hms)
+[2018-10-31T19:10:09.238215735+0000] Installing R package: yaml (2.1.18)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘yaml’ ...
+* DONE (yaml)
+[2018-10-31T19:10:09.458053956+0000] Installing R package: bitops (1.0-6)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘bitops’ ...
+* DONE (bitops)
+[2018-10-31T19:10:09.635392149+0000] Installing R package: RCurl (1.95-4.10)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘RCurl’ ...
+* DONE (RCurl)
+[2018-10-31T19:10:09.934475888+0000] Installing R package: codetools (0.2-15)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘codetools’ ...
+* DONE (codetools)
+[2018-10-31T19:10:10.119700924+0000] Installing R package: foreach (1.4.4)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘foreach’ ...
+* DONE (foreach)
+[2018-10-31T19:10:10.361304176+0000] Installing R package: openssl (1.0.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘openssl’ ...
+* DONE (openssl)
+[2018-10-31T19:10:10.666966455+0000] Installing R package: uuid (0.1-2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘uuid’ ...
+* DONE (uuid)
+[2018-10-31T19:10:10.867910909+0000] Installing R package: mime (0.5)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘mime’ ...
+* DONE (mime)
+[2018-10-31T19:10:11.050263618+0000] Installing R package: markdown (0.8)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘markdown’ ...
+* DONE (markdown)
+[2018-10-31T19:10:11.391836411+0000] Installing R package: packrat (0.4.9-1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘packrat’ ...
+* DONE (packrat)
+[2018-10-31T19:10:11.605134588+0000] Installing R package: gtable (0.2.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘gtable’ ...
+* DONE (gtable)
+[2018-10-31T19:10:11.788447437+0000] Installing R package: gridExtra (2.3)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘gridExtra’ ...
+* DONE (gridExtra)
+[2018-10-31T19:10:12.068360204+0000] Installing R package: PKI (0.1-5.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘PKI’ ...
+* DONE (PKI)
+[2018-10-31T19:10:12.281426849+0000] Installing R package: RColorBrewer (1.1-2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘RColorBrewer’ ...
+* DONE (RColorBrewer)
+[2018-10-31T19:10:12.468534797+0000] Installing R package: R.methodsS3 (1.7.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘R.methodsS3’ ...
+* DONE (R.methodsS3)
+[2018-10-31T19:10:12.656234193+0000] Installing R package: R.oo (1.21.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘R.oo’ ...
+* DONE (R.oo)
+[2018-10-31T19:10:12.896183460+0000] Installing R package: xtable (1.8-2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘xtable’ ...
+* DONE (xtable)
+[2018-10-31T19:10:13.147227242+0000] Installing R package: bindr (0.1.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘bindr’ ...
+* DONE (bindr)
+[2018-10-31T19:10:13.337863164+0000] Installing R package: Rcpp (0.12.16)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘Rcpp’ ...
+* DONE (Rcpp)
+[2018-10-31T19:10:14.546409473+0000] Installing R package: plyr (1.8.4)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘plyr’ ...
+* DONE (plyr)
+[2018-10-31T19:10:14.811496626+0000] Installing R package: reshape (0.8.7)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘reshape’ ...
+* DONE (reshape)
+[2018-10-31T19:10:15.023238623+0000] Installing R package: bindrcpp (0.2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘bindrcpp’ ...
+* DONE (bindrcpp)
+[2018-10-31T19:10:15.296279043+0000] Installing R package: units (0.6-1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘units’ ...
+* DONE (units)
+[2018-10-31T19:10:15.634449798+0000] Installing R package: xml2 (1.2.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘xml2’ ...
+* DONE (xml2)
+[2018-10-31T19:10:15.997551305+0000] Installing R package: R.utils (2.6.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘R.utils’ ...
+* DONE (R.utils)
+[2018-10-31T19:10:16.241802482+0000] Installing R package: rstudioapi (0.7)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘rstudioapi’ ...
+* DONE (rstudioapi)
+[2018-10-31T19:10:16.467601759+0000] Installing R package: withr (2.1.2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘withr’ ...
+* DONE (withr)
+[2018-10-31T19:10:16.685017339+0000] Installing R package: gdtools (0.1.7)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘gdtools’ ...
+* DONE (gdtools)
+[2018-10-31T19:10:16.986428349+0000] Installing R package: labeling (0.3)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘labeling’ ...
+* DONE (labeling)
+[2018-10-31T19:10:17.174505435+0000] Installing R package: DBI (0.8)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘DBI’ ...
+* DONE (DBI)
+[2018-10-31T19:10:17.446061308+0000] Installing R package: abind (1.4-5)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘abind’ ...
+* DONE (abind)
+[2018-10-31T19:10:17.639448017+0000] Installing R package: R6 (2.2.2)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘R6’ ...
+* DONE (R6)
+[2018-10-31T19:10:17.880628987+0000] Installing R package: scales (1.0.0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘scales’ ...
+* DONE (scales)
+[2018-10-31T19:10:18.137261057+0000] Installing R package: RJSONIO (1.3-0)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘RJSONIO’ ...
+* DONE (RJSONIO)
+[2018-10-31T19:10:18.484906261+0000] Installing R package: lattice (0.20-35)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘lattice’ ...
+* DONE (lattice)
+[2018-10-31T19:10:18.756527142+0000] Installing R package: sp (1.3-1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘sp’ ...
+* DONE (sp)
+[2018-10-31T19:10:19.062705330+0000] Building R package: raster (2.7-15)
+/mnt/packages/build /mnt
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *source* package ‘raster’ ...
+** package ‘raster’ successfully unpacked and MD5 sums checked
+** libs
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c RasterModule.cpp -o RasterModule.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c aggregate.cpp -o aggregate.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c area.cpp -o area.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c bilinear.cpp -o bilinear.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c broom.c -o broom.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c cellRowCol.cpp -o cellRowCol.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c clamp.c -o clamp.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c distance.cpp -o distance.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c edge.c -o edge.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c focal_fun.c -o focal_fun.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c focal_get.c -o focal_get.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c focal_sum.c -o focal_sum.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c geodesic.c -o geodesic.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c getPolygons.cpp -o getPolygons.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c intersect.c -o intersect.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c layerize.c -o layerize.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c modal.cpp -o modal.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c ppmin.cpp -o ppmin.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c r_terrain.c -o r_terrain.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c rasterize.cpp -o rasterize.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c rcpp_aggregate.cpp -o rcpp_aggregate.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c rcpp_distance.cpp -o rcpp_distance.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c rcpp_xyCell.cpp -o rcpp_xyCell.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c reclass.c -o reclass.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c util.c -o util.o
+gcc -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c wirth.c -o wirth.o
+g++ -std=gnu++11 -shared -L/opt/R/3.4.4/lib/R/lib -L/usr/local/lib -o raster.so RasterModule.o RcppExports.o aggregate.o area.o bilinear.o broom.o cellRowCol.o clamp.o distance.o edge.o focal_fun.o focal_get.o focal_sum.o geodesic.o getPolygons.o intersect.o layerize.o modal.o ppmin.o r_terrain.o rasterize.o rcpp_aggregate.o rcpp_distance.o rcpp_xyCell.o reclass.o util.o wirth.o -L/opt/R/3.4.4/lib/R/lib -lR
+installing to /opt/R/3.4.4/lib/R/library/raster/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+in method for ‘brick’ with signature ‘x="big.matrix"’: no definition for class “big.matrix”
+in method for ‘brick’ with signature ‘x="kasc"’: no definition for class “kasc”
+in method for ‘brick’ with signature ‘x="grf"’: no definition for class “grf”
+in method for ‘coerce’ with signature ‘"STFDF","RasterBrick"’: no definition for class “STFDF”
+in method for ‘coerce’ with signature ‘"STSDF","RasterBrick"’: no definition for class “STSDF”
+in method for ‘coerce’ with signature ‘"asc","RasterLayer"’: no definition for class “asc”
+in method for ‘coerce’ with signature ‘"RasterLayer","asc"’: no definition for class “asc”
+in method for ‘coerce’ with signature ‘"kasc","RasterBrick"’: no definition for class “kasc”
+in method for ‘coerce’ with signature ‘"kasc","RasterStack"’: no definition for class “kasc”
+in method for ‘coerce’ with signature ‘"kde","RasterLayer"’: no definition for class “kde”
+in method for ‘coerce’ with signature ‘"grf","RasterBrick"’: no definition for class “grf”
+in method for ‘coerce’ with signature ‘"grf","RasterLayer"’: no definition for class “grf”
+Creating a generic function for ‘nrow’ from package ‘base’ in package ‘raster’
+Creating a generic function for ‘ncol’ from package ‘base’ in package ‘raster’
+in method for ‘extent’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘extract’ with signature ‘x="Raster",y="sf"’: no definition for class “sf”
+in method for ‘mask’ with signature ‘x="Raster",mask="sf"’: no definition for class “sf”
+in method for ‘raster’ with signature ‘x="big.matrix"’: no definition for class “big.matrix”
+in method for ‘raster’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘raster’ with signature ‘x="kasc"’: no definition for class “kasc”
+in method for ‘raster’ with signature ‘x="asc"’: no definition for class “asc”
+in method for ‘raster’ with signature ‘x="kde"’: no definition for class “kde”
+in method for ‘raster’ with signature ‘x="grf"’: no definition for class “grf”
+in method for ‘rasterize’ with signature ‘x="sf",y="Raster"’: no definition for class “sf”
+Creating a generic function for ‘rowSums’ from package ‘base’ in package ‘raster’
+Creating a generic function for ‘colSums’ from package ‘base’ in package ‘raster’
+in method for ‘stack’ with signature ‘x="kasc"’: no definition for class “kasc”
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* creating tarball
+packaged installation of ‘raster’ as ‘raster_2.7-15_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (raster)
+/mnt
+[2018-10-31T19:11:01.346644129+0000] Building R package: satellite (1.0.1)
+/mnt/packages/build /mnt
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *source* package ‘satellite’ ...
+** package ‘satellite’ successfully unpacked and MD5 sums checked
+** libs
+g++  -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
+g++  -I/opt/R/3.4.4/lib/R/include -DNDEBUG  -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2  -c SatelliteCppFun.cpp -o SatelliteCppFun.o
+g++ -shared -L/opt/R/3.4.4/lib/R/lib -L/usr/local/lib -o satellite.so RcppExports.o SatelliteCppFun.o -L/opt/R/3.4.4/lib/R/lib -lR
+installing to /opt/R/3.4.4/lib/R/library/satellite/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* creating tarball
+packaged installation of ‘satellite’ as ‘satellite_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (satellite)
+/mnt
+[2018-10-31T19:11:09.252391110+0000] Installing R package: rgdal (1.3-6)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘rgdal’ ...
+* DONE (rgdal)
+[2018-10-31T19:11:09.609968624+0000] Installing R package: gdalUtils (2.0.1.7)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘gdalUtils’ ...
+* DONE (gdalUtils)
+[2018-10-31T19:11:09.869576169+0000] Installing R package: latticeExtra (0.6-28)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘latticeExtra’ ...
+* DONE (latticeExtra)
+[2018-10-31T19:11:10.130333320+0000] Installing R package: Matrix (1.2-12)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘Matrix’ ...
+* DONE (Matrix)
+[2018-10-31T19:11:10.585308194+0000] Installing R package: igraph (1.2.1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘igraph’ ...
+* DONE (igraph)
+[2018-10-31T19:11:11.281484792+0000] Installing R package: gdistance (1.2-1)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘gdistance’ ...
+* DONE (gdistance)
+[2018-10-31T19:11:11.511314816+0000] Installing R package: ipdw (0.2-6)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘ipdw’ ...
+* DONE (ipdw)
+[2018-10-31T19:11:11.714012129+0000] Installing R package: e1071 (1.6-8)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘e1071’ ...
+* DONE (e1071)
+[2018-10-31T19:11:11.948189586+0000] Installing R package: classInt (0.2-3)
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *binary* package ‘classInt’ ...
+* DONE (classInt)
+[2018-10-31T19:11:12.125931358+0000] Building R package: sf (0.7-1)
+/mnt/packages/build /mnt
+* installing to library ‘/opt/R/3.4.4/lib/R/library’
+* installing *source* package ‘sf’ ...
+** package ‘sf’ successfully unpacked and MD5 sums checked
+configure: CC: gcc
+configure: CXX: g++ -std=gnu++11
+checking for gdal-config... /usr/bin/gdal-config
+checking gdal-config usability... yes
+configure: GDAL: 2.1.3
+checking GDAL version >= 2.0.0... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking gdal.h usability... yes
+checking gdal.h presence... yes
+checking for gdal.h... yes
+checking GDAL: linking with --libs only... yes
+checking GDAL: /usr/share/gdal/2.1/pcs.csv readable... yes
+checking GDAL: checking whether PROJ is available for linking:... yes
+checking GDAL: checking whether PROJ is available fur running:... yes
+configure: pkg-config proj exists, will use it
+checking proj_api.h usability... yes
+checking proj_api.h presence... yes
+checking for proj_api.h... yes
+configure: PROJ: 4.9.2
+checking for pj_init_plus in -lproj... yes
+checking PROJ: epsg found and readable... yes
+checking PROJ: conus found and readable... yes
+checking for geos-config... /usr/bin/geos-config
+checking geos-config usability... yes
+configure: GEOS: 3.5.1
+checking GEOS version >= 3.4.0... yes
+checking geos_c.h usability... yes
+checking geos_c.h presence... yes
+checking for geos_c.h... yes
+checking geos: linking with -L/usr/lib/x86_64-linux-gnu -lgeos_c -L/usr/lib/x86_64-linux-gnu -lgeos-3.5.1... yes
+configure: Package CPP flags:   -I/usr/include/gdal -I/usr/include
+configure: Package LIBS: -lproj   -L/usr/lib -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c -L/usr/lib/x86_64-linux-gnu -lgeos-3.5.1
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG -I/usr/include/gdal -I/usr/include -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG -I/usr/include/gdal -I/usr/include -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c bbox.cpp -o bbox.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG -I/usr/include/gdal -I/usr/include -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c gdal.cpp -o gdal.o
+g++ -std=gnu++11 -I/opt/R/3.4.4/lib/R/include -DNDEBUG -I/usr/include/gdal -I/usr/include -I"/opt/R/3.4.4/lib/R/library/Rcpp/include" -I/usr/local/include   -fpic  -g -O2 -c gdal_geom.cpp -o gdal_geom.o
+In file included from ../inst/include/sf.h:7:0,
+                 from RcppExports.cpp:4:
+../inst/include/sf_RcppExports.h: In function ‘Rcpp::List sf::CPL_read_wkb(Rcpp::List, bool, bool)’:
+../inst/include/sf_RcppExports.h:41:13: error: ‘isLongjumpSentinel’ is not a member of ‘Rcpp::internal’
+         if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+             ^
+../inst/include/sf_RcppExports.h:42:19: error: ‘LongjumpException’ is not a member of ‘Rcpp’
+             throw Rcpp::LongjumpException(rcpp_result_gen);
+                   ^
+../inst/include/sf_RcppExports.h: In function ‘Rcpp::List sf::CPL_write_wkb(Rcpp::List, bool)’:
+../inst/include/sf_RcppExports.h:62:13: error: ‘isLongjumpSentinel’ is not a member of ‘Rcpp::internal’
+         if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+             ^
+../inst/include/sf_RcppExports.h:63:19: error: ‘LongjumpException’ is not a member of ‘Rcpp’
+             throw Rcpp::LongjumpException(rcpp_result_gen);
+                   ^
+RcppExports.cpp: In function ‘SEXPREC* _sf_CPL_read_wkb(SEXP, SEXP, SEXP)’:
+RcppExports.cpp:922:32: error: ‘isLongjumpSentinel’ is not a member of ‘Rcpp::internal’
+     bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+                                ^
+RcppExports.cpp:924:9: error: ‘resumeJump’ is not a member of ‘Rcpp::internal’
+         Rcpp::internal::resumeJump(rcpp_result_gen);
+         ^
+RcppExports.cpp: In function ‘SEXPREC* _sf_CPL_write_wkb(SEXP, SEXP)’:
+RcppExports.cpp:957:32: error: ‘isLongjumpSentinel’ is not a member of ‘Rcpp::internal’
+     bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+                                ^
+RcppExports.cpp:959:9: error: ‘resumeJump’ is not a member of ‘Rcpp::internal’
+         Rcpp::internal::resumeJump(rcpp_result_gen);
+         ^
+/opt/R/3.4.4/lib/R/etc/Makeconf:168: recipe for target 'RcppExports.o' failed
+make: *** [RcppExports.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘sf’
+* removing ‘/opt/R/3.4.4/lib/R/library/sf’
+################################# End Task Log ################################# 
+Error: Unhandled Exception: Child Task 561665827 failed: Error building image: Error building sf (0.7-1). Build exited with non-zero status: 1
+Execution halted
