@@ -5,6 +5,6 @@ account: udwq
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 359198
-bundleId: 1675033
+bundleId: 1676578
 url: https://udwq.shinyapps.io/GSL_data_explorer/
-when: 1541012895.82849
+when: 1541082682.90537
