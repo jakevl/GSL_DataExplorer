@@ -223,7 +223,7 @@ conditionalPanel(
 		),
 		
 
-		helpText("This tool is currently in beta-testing. For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
+		helpText("For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
 		
 		
 	),
@@ -279,7 +279,7 @@ conditionalPanel(
 		helpText("AMAV = American Avocet. BNST = Black-necked stilt. AIC = Antelope Island Causeway. ANTI = Antelope Island. FARM = Farmington Bay. OGBA = Ogden Bay. SALT = Saltair. All biological oncentrations reported in dry weight.")
 		
 	),
-	helpText("This tool is currently in beta-testing. For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
+	helpText("For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
 
 	),
 	
@@ -322,7 +322,7 @@ conditionalPanel(
 		actionButton("interpolate", "Interpolate", style='height:50px; padding:4px; font-size:150%',width="200px"),
 		br(),
 		br(),
-		helpText("This tool is currently in beta-testing. For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
+		helpText("For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
 		),
 		
 		# Main panel for displaying outputs ----
@@ -376,7 +376,7 @@ conditionalPanel(
 			
 			
 			br(),
-			helpText("This tool is currently in beta-testing. For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
+			helpText("For help with this tool, or to report a bug, please contact Jake Vander Laan, UDWQ, jvander@utah.gov, (801) 536-4350.")
 			),
 			
 			mainPanel(
