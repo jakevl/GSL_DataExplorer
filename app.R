@@ -128,6 +128,12 @@ titlePanel("",
                         tags$title("GSL data explorer"))
 	),
 
+
+conditionalPanel(
+	condition="input.tabs!=2",
+	helpText("Note: data on this tab are drawn from the USGS NWIS database.")
+	),
+
 conditionalPanel(
 	condition="input.tabs==1",
 	
@@ -138,7 +144,8 @@ conditionalPanel(
     sidebarPanel(
 
       # Input: ----
-    radioButtons(inputId = "analysisType",
+    
+	radioButtons(inputId = "analysisType",
                 label = "Analysis:",
 				choiceNames=c("Concentration","Mass","GSL-NARS comparison"),
 				choiceValues=c(1,3,2),inline=TRUE),
