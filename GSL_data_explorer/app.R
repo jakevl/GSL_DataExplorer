@@ -11,7 +11,6 @@ library(shiny)
 library(lubridate)
 library(reshape2)
 library(plyr)
-library(waterData)
 
 colnames(gsl_data)[colnames(gsl_data)=="site_name"]="Site"
 options(scipen=999)

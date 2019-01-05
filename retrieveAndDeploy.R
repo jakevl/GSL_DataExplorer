@@ -109,7 +109,7 @@ data_mat$Total_phosphorus_mgL[data_mat$Total_phosphorus_mgL>=9]=NA
 
 write.csv(file="data/GSL_WQ.csv",data_mat,row.names=FALSE)
 
-source("functions/retrieveLakeElev_calcVol.R")
+source("GSL_Data_Explorer/functions/retrieveLakeElev_calcVol.R")
 
 
 library(rsconnect)
