@@ -1,6 +1,6 @@
 ###GSL water quality retrieval
 options(repos = c(CRAN = "https://cran.rstudio.com"))
-setwd("F:\\Shiny\\GSL_data_explorer")
+setwd("F:\\Shiny\\GSL_data_explorer\\GSL_data_explorer")
 library(dataRetrieval)
 
 #select desired sites
@@ -109,11 +109,11 @@ data_mat$Total_phosphorus_mgL[data_mat$Total_phosphorus_mgL>=9]=NA
 
 write.csv(file="data/GSL_WQ.csv",data_mat,row.names=FALSE)
 
-source("GSL_Data_Explorer/functions/retrieveLakeElev_calcVol.R")
+source("functions/retrieveLakeElev_calcVol.R")
 
 
 library(rsconnect)
-deployApp("F:\\Shiny\\GSL_data_explorer",account="udwq")
+deployApp("F:\\Shiny\\GSL_data_explorer\\GSL_data_explorer",account="udwq")
 #deployApp("F:\\Shiny\\GSL_data_explorer",account="jakevl")
 
 library(shiny)

@@ -2,7 +2,7 @@
 #Pull lake elevation data and calculate UBL & DBL volumes
 
 options(repos = c(CRAN = "https://cran.rstudio.com"))
-setwd("F:\\Shiny\\GSL_data_explorer")
+setwd("F:\\Shiny\\GSL_data_explorer\\GSL_data_explorer")
 library(waterData)
 
 #Query south arm elevation. Calculate estimated BL volumes.
